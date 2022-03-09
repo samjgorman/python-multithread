@@ -12,7 +12,6 @@ while thread B will release the semaphore.
 
 from threading import Thread, Semaphore
 
-
 def wait(permits):
     print("Awaiting thread A's signal")
     permits.acquire()
@@ -22,7 +21,6 @@ def wait(permits):
 def signal(permits):
     print("Signaling to thread B")
     permits.release()
-
 
 def main():
     permits = Semaphore(value=0)
@@ -35,7 +33,6 @@ def main():
 
     threadA.join()
     threadB.join()
-
 
 if __name__ == "__main__":
     main()
