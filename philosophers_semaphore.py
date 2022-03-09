@@ -34,9 +34,10 @@ K_NUM_FORKS = 5
 
 def eat(permits, left, right):
     permits.acquire()
-    timeToEat = randint(1, 2)
+    timeToPause = randint(1, 2)
     left.acquire()
-    time.sleep(timeToEat)
+    # Without the inclusion of a semaphore, this sleep runs the risk of creating deadlock
+    time.sleep(timeToPause)
     right.acquire()
     timeToEat = randint(1, 2)
     time.sleep(timeToEat)
@@ -73,7 +74,6 @@ def main():
         right = forks[(i+1) % K_NUM_PHILOSOPHERS]
         thread = Thread(target=philosophize, args=(permits, left, right))
         threads.append(thread)
-
         thread.start()
 
     cleanup(threads)
