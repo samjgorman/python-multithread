@@ -13,5 +13,7 @@ Pattern illustrating how to have a thread A proceed only after receiving a signa
 from thread(s) N times.
 ### Reader-Writer
 Coordination of a reader thread & writer thread to access shared data structure.
+### Threaded RSS Feed
+Web scraper for RSS feed(s) to demonstrate multithreading and locks.
 
 Examples adapted from C++ to Python from [Stanford CS110](https://web.stanford.edu/class/archive/cs/cs110/cs110.1216/) for my own learning purposes.
