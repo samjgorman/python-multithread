@@ -6,7 +6,6 @@ https://www.jcchouinard.com/read-rss-feed-with-python/
 
 '''
 
-from wsgiref.headers import Headers
 import requests
 import lxml
 from bs4 import BeautifulSoup
