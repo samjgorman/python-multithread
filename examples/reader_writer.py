@@ -1,6 +1,6 @@
 ''''
 
-Making reads and writes to a shared data structure:
+Making concurrent reads and writes to a shared data structure:
 
 This demo program requires thread coordination with
 semaphores to avoid race conditions in which...
